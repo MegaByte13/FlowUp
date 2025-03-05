@@ -28,8 +28,9 @@
   </head>
   <script type="text/javascript">
     var pathname = window.location.pathname;
+    var newPath = "/FlowUp" + pathname;
     if (!pathname.startsWith("/FlowUp")) {
-      window.location.replace("/FlowUp" + pathname);
+      window.location.replace(newPath);
     }
   </script>
   
