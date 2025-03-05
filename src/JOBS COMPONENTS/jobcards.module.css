@@ -1,0 +1,135 @@
+::-webkit-scrollbar {
+    width: 10px; /* Толщина скроллбара */
+}
+
+/* Фон скроллбара */
+::-webkit-scrollbar-track {
+    background: #222; /* Цвет фона */
+    border-radius: 10px; /* Закругляем углы */
+}
+
+/* Сам ползунок (бегунок) */
+::-webkit-scrollbar-thumb {
+    background: #FF8B36; /* Цвет ползунка */
+    border-radius: 10px; /* Закруглённый */
+}
+
+/* При наведении */
+::-webkit-scrollbar-thumb:hover {
+    background: #0056b3;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+hr{
+    width: 80%;
+    padding: 0;
+    margin: 0 auto;
+}
+.button{
+    display: block;
+    margin: 50px auto 0px auto;
+    height: 6vh;
+    width: 250px;
+    max-width: 300px;
+    min-width: 150px;
+    font-size: 1.2rem;
+    letter-spacing: 0.05rem;
+    border: 1px solid white;
+    text-align: center;
+    color: white;
+}
+.wrapper{
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto;
+    gap: 100px;
+    margin: 20px;
+}
+
+.wrapper>div{
+    border: 1px solid white;
+    height: 500px;/*Изменить позже*/
+}
+.createdCardWrapper, .inProgressCardWrapper, .doneCardWrapper{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1px 9fr;
+    gap: 20px;
+    padding: 15px;
+}
+
+.titleCard{
+    border: 0px solid white;
+    display: grid;
+    grid-template-columns: 1fr 1px 1fr;
+    grid-template-rows: auto;
+    gap: 5px;
+    justify-items: center;
+    align-items: center;
+}
+.titleDivider{
+    width: 1px;
+    height: 100%;
+}
+.titleCard>div{
+    border: 0px solid white;
+    color: white;
+    width: 80%;
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+.titleCard>input{
+    height: 70%;
+    width: 60%;
+    border: 1px solid white;
+    border-radius: 4px;
+    background: none;
+}
+.jobCards{
+    overflow-y: scroll;
+}
+/*Растановка внутри одной карточки*/
+
+.card{/*Основной контейнер карточки*/
+    border: 1px solid white;
+    margin: 20px;
+    text-align: center;
+    color: white;
+    border-radius: 10px;
+    background-color: rgba(71, 71, 71, 0.5);
+    backdrop-filter: blur(13px);
+}
+
+.card>h2, .card>p, .card>hr{
+    margin: 10px auto;
+    padding: 0;
+}
+
+.description{
+    font-family: poppinsRegular;
+    font-size: 0.9rem;
+    font-weight: 100;
+    width: 80%;
+}
+.footer{
+    font-family: poppinsmedium;
+    letter-spacing: 0.05rem;
+}
+.pageWrapper{
+    position: relative;
+    height: 600px;
+
+}

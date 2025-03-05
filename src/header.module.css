@@ -1,0 +1,20 @@
+.container{
+    display: flex;
+    justify-content: center;
+    border-bottom: 2px solid grey;
+  }
+.container h1{
+    display: grid;
+    place-items: center;
+    padding-right: 20px;
+    border-right: 2px solid grey;
+    color: grey;
+    font-weight: 300;
+  }
+.container img{
+    padding-top: 50px;
+    margin-left: 30px;
+    display: block;
+    transform: scale(0.7);
+    transform-origin: 0 0;
+  }

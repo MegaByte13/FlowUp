@@ -1,0 +1,111 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #272727;
+}
+button{
+  all: unset;
+}
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+* {
+  box-sizing: border-box;
+}
+@font-face {
+  font-family: poppinsItalic;
+  src: url(./FONTS/poppins/Poppins-LightItalic.ttf);
+}
+@font-face {
+  font-family: poppinsLight;
+  src: url(./FONTS/poppins/Poppins-Light.ttf);
+}
+@font-face {
+  font-family: poppinsMedium;
+  src: url(./FONTS/poppins/Poppins-Medium.ttf);
+}
+@font-face {
+  font-family: poppinsRegular;
+  src: url(./FONTS/poppins/Poppins-Regular.ttf);
+}
+@font-face {
+  font-family: poppins;
+  src: url(./FONTS/poppins/Poppins-Medium.ttf);
+}
+@font-face {
+  font-family: chakra;
+  src: url(./FONTS/chakra/ChakraPetch-Medium.ttf);
+}
+
+#content{
+  margin: 20px;
+}
+
+
+table{
+  text-align: center;
+  margin: 50px 0px 0px 100px;
+  color: white;
+  border: 2px solid white;
+}
+table tr th{
+  padding: 10px;
+}
+#inv-container{
+  display: flex;
+}
+#inv-inputArea-container{
+  border: 0px solid white;
+  margin: 50px 0px 0px 200px;
+  display: flex;
+  height: auto;
+  flex-direction: column;
+  justify-content: center;
+}
+#add-to-inv{
+  margin: 50px 0px 0px 200px;
+  display: flex;
+  height: auto;
+  flex-direction: column;
+  justify-content: center;
+}
+#return{
+  text-decoration: none;
+  color: white;
+  font-size: 150%;
+  border: 0px solid white;
+  display: block;
+  padding-right: 100px;
+  width: auto;
+  text-align: right;
+}
+#return::before{
+  content: '<--';
+}
+#employees-info-container{
+  display: flex;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, auto);
+  justify-content: space-evenly;
+  gap: 50px;
+  
+}
+#employees-info-container p{
+  padding: 0px 0px 0px 0px;
+  margin: 0px;
+  color: grey;
+  text-shadow: 0px 0px 2px grey;
+  text-align: center;
+}
+.crew-info-msg{
+  padding: 10px;
+  border: 1px solid white;
+  border-radius: 5px;
+  margin: 20px 0px 0px 0px;
+  text-align: center;
+}
