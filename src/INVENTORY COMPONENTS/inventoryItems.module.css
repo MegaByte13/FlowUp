@@ -1,6 +1,58 @@
 
+@keyframes fadeScale {
+    from {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateX(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateX(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+@keyframes slideInLine{
+    from {
+        opacity: 0;
+        transform: translateX(-100px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+
+}
+@keyframes slideInRight {
+    from {
+        opacity: 0;
+        transform: translateX(100px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
 
 .header{
+    animation: fadeScale 1.2s ease-out forwards;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: 100px;
@@ -72,6 +124,13 @@
     justify-content: center;
     gap: 20px;
 }
+.animate {
+    opacity: 0;
+    transform: translateX(-20px);
+    animation: slideIn 0.5s ease-in-out forwards;
+}
+
+
 #titleList>.itemNumber, .itemName, .description, .quantity{
     text-align: center;
     align-content: center;
@@ -90,6 +149,10 @@
     justify-content: center;
     gap: 20px;
     margin: 10px;
+    opacity: 0;
+    transform: translateX(-20px);
+    animation: slideIn 0.5s ease-out forwards;
+    animation-delay: 1.4s; /* Ждем появления заголовков */
 }
 .item>div{
     font-size:medium;
@@ -117,6 +180,10 @@
     background-color: white;
     width: 65%;
     margin-left: 90px;
+    opacity: 0;
+    transform: translateX(-100px);
+    animation: slideInLine 1.5s ease-out forwards;
+    animation-delay: 1.4s; /* Ждем появления заголовков */
 }
 
 .add_item_form{
@@ -126,6 +193,10 @@
     grid-template-rows: repeat(5, 1fr);
     gap: 0px;
     color: white;
+    opacity: 0;
+  transform: translateX(20px);
+  animation: slideInRight 1s ease-out forwards;
+  animation-delay: 0.9s; /* Форма появляется после заголовков и предметов */
 }
 .add_item_form>div{
     align-content: center;

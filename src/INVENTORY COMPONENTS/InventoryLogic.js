@@ -44,6 +44,12 @@ function useInventory(storageKey){
         }
         function handleAddItem(e){
             e.preventDefault();
+
+            if (!formData.name.trim() || !formData.number.trim() || !formData.description.trim()) {
+                alert("Пожалуйста, заполните все поля!");
+                return;
+            }
+
             setItems(prevItems => [...prevItems, {
                 id: Date.now(),
                 name: formData.name,

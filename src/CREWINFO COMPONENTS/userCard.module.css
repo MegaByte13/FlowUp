@@ -71,6 +71,7 @@
 }
 .yellowCircle{
     margin-right: 10px;
+    margin-left: 10px;
     border-radius: 50%;
     width: 20px;
     background-color: #D2C426;

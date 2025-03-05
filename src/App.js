@@ -6,7 +6,7 @@ import Jobs from './MAIN COMPONENTS/jobs';
 import InventoryPage from './MAIN COMPONENTS/inventoryPage';
 import CrewInfo from './MAIN COMPONENTS/crewinfo';
 import Spare from "./MAIN COMPONENTS/spare";
-import {BrowserRouter, Route, Routes, HashRouter } from 'react-router-dom'
+import {Route, Routes, HashRouter } from 'react-router-dom'
 import HFO from "./INVENTORY COMPONENTS/HFO";
 import ME from "./INVENTORY COMPONENTS/ME";
 import AE from "./INVENTORY COMPONENTS/AE";

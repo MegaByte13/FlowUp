@@ -1,9 +1,5 @@
-import React, { createRef } from "react";
-
+import React from "react";
 import UserCard from "../CREWINFO COMPONENTS/userCard";
-
-    
-
 
 function CrewInfo(props){
 
@@ -11,9 +7,6 @@ function CrewInfo(props){
         <div>
             <UserCard />
         </div>
-    )
-
-
-}
+    )}
 
 export default CrewInfo

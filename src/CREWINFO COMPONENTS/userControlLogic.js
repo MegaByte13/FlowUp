@@ -30,12 +30,28 @@ export function useControlLogic(){
     }
 
     const getDaysUntilEnd = (employee) => {
+        if (!employee.endContract) return 0; // Проверяем, что контракт есть
+    
         const today = new Date();
         const endContract = new Date(employee.endContract);
-        const diffTime = endContract - today;
+    
+        if (isNaN(endContract)) {
+            console.error(`Ошибка в дате контракта: ${employee.endContract}`);
+            return 0;
+        }
+    
+        const diffTime = endContract.getTime() - today.getTime();
         const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
-        return diffDays > 0 ? diffDays : 0;
+    
+        // Если контракт закончился и человек НЕ на судне – считаем дни "дома"
+        if (diffDays < 0 && !employee.onBoard) {
+            return Math.abs(diffDays) + " days at home";
+        }
+    
+        return diffDays > 0 ? diffDays : 0; // Если контракт истек, но человек на судне – показываем 0
     };
+    
+    
 
     const addEmployee=(newEmployee)=>{
 

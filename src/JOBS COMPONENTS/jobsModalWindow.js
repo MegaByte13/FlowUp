@@ -20,7 +20,7 @@ function JobsModalWindow({
             <header className={s.modalHeader}>
                 <div style={{ fontFamily: 'poppinsLight' }}>*all fields are required</div>
                 <div style={{ fontFamily: 'poppinsRegular', fontSize: '2rem', textAlign: 'center' }}>TASK CARD</div>
-                <button onClick={closeModal} style={{ color: '#D76A1B', fontSize: '1.5rem' }}>Close</button>
+                <motion.button onClick={closeModal} style={{ color: '#D76A1B', fontSize: '1.5rem' }} whileHover={{scale: 1.1}} transition={{duration: 0.7, ease: "easeInOut"}}>Close</motion.button>
             </header>
 
             <div className={s.modalInput}>
@@ -56,12 +56,19 @@ function JobsModalWindow({
                         </label>
                     </div>
                 </div>
-                <button className={s.delBtn} onClick={deleteTask} disabled={!editingTask}>
+                <motion.button className={s.delBtn} onClick={deleteTask} disabled={!editingTask}
+                whileHover={{ x: 20 }}
+                transition={{ duration: 0.4 }}
+                >
                     <img src={delBtn} alt='Delete' />
-                </button>
-                <div className={s.save}>
+                </motion.button>
+                <motion.div className={s.save}
+                 
+                whileHover={{ x: -20 }}
+                transition={{ duration: 0.4 }}
+                >
                     <button className={s.saveBtn} onClick={editingTask ? updateTask : addTask}>SAVE!</button>
-                </div>
+                </motion.div>
             </footer>
         </div>
     );

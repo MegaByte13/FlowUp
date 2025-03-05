@@ -32,8 +32,8 @@ function ModalWindow({setIsOpen, addEmployee, editingEmployee, initialData}){
             name,
             surname,
             rank,
-            startContract,
-            endContract,
+            startContract: new Date(startContract).toISOString().split('T')[0],
+            endContract: new Date(endContract).toISOString().split('T')[0],
             totalDays,
             onBoard
         });
@@ -85,12 +85,14 @@ function ModalWindow({setIsOpen, addEmployee, editingEmployee, initialData}){
 
             </div>
             <div className={s.modalWindowButton}>
-            <label>
+            
+                <button onClick={handleSubmit}>{editingEmployee !==null ? 'SAVE CHANGES' : 'ADD MEMBER'}</button>
+                <label>
                     <input type="checkbox" checked={onBoard} onChange={() => setOnBoard(!onBoard)} />
                     Employee is still onboard
                     </label>
-                <button onClick={handleSubmit}>{editingEmployee !==null ? 'SAVE CHANGES' : 'ADD MEMBER'}</button>
             </div>
+            
         </div>
     )
 }
