@@ -23,7 +23,7 @@ function App(props){
 
     return(
         <React.Fragment>
-            <HashRouter basename="/FlowUp">
+            <HashRouter>
             
                 <Header />
                 <Navbar />

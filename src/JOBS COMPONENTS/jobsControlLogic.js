@@ -41,7 +41,17 @@ export function useJobsControl() {
         setIsModalOpen(false);
     };
 
+    const validateFields = () => {
+        if (!title.trim() || !description.trim() || !role.trim()) {
+            alert("Все поля должны быть заполнены!");
+            return false;
+        }
+        return true;
+    };
+
     const addTask = () => {
+        if (!validateFields()) return;
+
         const newTask = {
             title,
             description,
@@ -59,7 +69,7 @@ export function useJobsControl() {
     };
 
     const updateTask = () => {
-        if (!editingTask) return;
+        if (!editingTask || !validateFields()) return;
 
         const updatedTask = {
             ...editingTask,
