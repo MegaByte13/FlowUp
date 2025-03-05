@@ -27,15 +27,12 @@
     <title>React App</title>
   </head>
   <script type="text/javascript">
-    (function() {
-      var redirect = sessionStorage.redirect;
-      delete sessionStorage.redirect;
-      if (redirect && redirect !== location.href) {
-        history.replaceState(null, null, redirect);
-      }
-    })();
+    var pathname = window.location.pathname;
+    if (!pathname.startsWith("/FlowUp")) {
+      window.location.replace("/FlowUp" + pathname);
+    }
   </script>
-  <meta http-equiv="refresh" content="0; url=/FlowUp/">
+  
   
   
   <body>
