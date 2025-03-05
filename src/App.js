@@ -6,7 +6,7 @@ import Jobs from './MAIN COMPONENTS/jobs';
 import InventoryPage from './MAIN COMPONENTS/inventoryPage';
 import CrewInfo from './MAIN COMPONENTS/crewinfo';
 import Spare from "./MAIN COMPONENTS/spare";
-import {BrowserRouter, Route, Routes } from 'react-router-dom'
+import {BrowserRouter, Route, Routes, HashRouter } from 'react-router-dom'
 import HFO from "./INVENTORY COMPONENTS/HFO";
 import ME from "./INVENTORY COMPONENTS/ME";
 import AE from "./INVENTORY COMPONENTS/AE";
@@ -23,7 +23,8 @@ function App(props){
 
     return(
         <React.Fragment>
-            <BrowserRouter>
+            <HashRouter basename="/FlowUp">
+            
                 <Header />
                 <Navbar />
 
@@ -41,7 +42,7 @@ function App(props){
                     <Route path='/inventory/MAC' element={<MAC />}></Route>
                     <Route path='/inventory/SPARE' element={<SPARE />}></Route>
                 </Routes>
-            </BrowserRouter>
+            </HashRouter>
         </React.Fragment>
     )
 }

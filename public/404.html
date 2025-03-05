@@ -26,6 +26,15 @@
     -->
     <title>React App</title>
   </head>
+  <script type="text/javascript">
+    var pathname = window.location.pathname;
+    var newPath = "/FlowUp" + pathname;
+    if (!pathname.startsWith("/FlowUp")) {
+      window.location.replace(newPath);
+    }
+  </script>
+  
+  
   
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
